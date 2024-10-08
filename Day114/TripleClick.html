@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+      rerum repudiandae enim consectetur consequatur quae recusandae,
+      perferendis at quod illum, deleniti similique a eius nulla architecto
+      earum. Iure, deleniti.
+    </p>
+    <script>
+      // WRITE THE JS PROGRAM HERE ====================================================================
+      const paragraphs = document.querySelectorAll("p");
+
+      paragraphs.forEach((paragraph) => {
+        paragraph.addEventListener("click", (event) => {
+          if (event.detail === 1) {
+            paragraph.style.backgroundColor = "red";
+          } else if (event.detail === 2) {
+            paragraph.style.backgroundColor = "green";
+          } else {
+            paragraph.style.backgroundColor = "";
+          }
+        });
+        // paragraph.addEventListener("dblclick", (evt) => {
+        //   console.log("dbl event", evt.detail);
+        // });
+      });
+    </script>
+    <!-- <script>
+      const paragraphs = document.querySelectorAll("p");
+      const clickDelay = 10; // Max time between clicks in ms
+
+      paragraphs.forEach((paragraph) => {
+        let clickCount = 0;
+        let clickTimer;
+
+        paragraph.addEventListener("click", () => {
+          clickCount++;
+
+          // Clear the existing timer on each click
+          clearTimeout(clickTimer);
+
+          // Start a new timer to check the click count after the delay
+          clickTimer = setTimeout(() => {
+            if (clickCount === 1) {
+              // Single click: Highlight with red
+              paragraph.style.backgroundColor = "red";
+            } else if (clickCount === 2) {
+              // Double click: Highlight with green
+              paragraph.style.backgroundColor = "green";
+            } else if (clickCount === 3) {
+              // Triple click: Remove highlight
+              paragraph.style.backgroundColor = "";
+            }
+
+            // Reset click count after handling
+            clickCount = 0;
+          }, clickDelay);
+        });
+      });
+    </script> -->
+  </body>
+</html>
